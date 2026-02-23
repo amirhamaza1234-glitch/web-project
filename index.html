@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Master Your Knowledge</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app">
+        <!-- Login Screen -->
+        <div id="login-screen" class="screen active">
+            <header>
+                <h1>Welcome to QuizMaster</h1>
+                <p>Please enter your details to begin the assessment.</p>
+            </header>
+
+            <div class="login-container">
+                <div class="input-group">
+                    <label for="user-name">Full Name</label>
+                    <input type="text" id="user-name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="app-number">Application Number</label>
+                    <input type="text" id="app-number" placeholder="APP-123456" required>
+                </div>
+                <button id="login-btn" class="main-btn">Login & Start</button>
+            </div>
+        </div>
+
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen">
+            <header>
+                <h1>QuizMaster</h1>
+                <p>Choose your topic and challenge yourself!</p>
+            </header>
+
+            <div class="setup-container">
+                <div class="setup-group">
+                    <h3>Select Topic</h3>
+                    <div id="topic-grid" class="topic-grid">
+                        <!-- Topics will be inserted here -->
+                    </div>
+                </div>
+
+                <button id="start-btn" class="main-btn">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div id="current-topic-badge" class="badge">Topic</div>
+                <div id="timer-display" class="timer">00:00</div>
+            </div>
+
+            <div class="quiz-container">
+                <div id="quiz">
+                    <!-- Questions will be inserted here -->
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="submit-btn" class="main-btn">Submit Quiz</button>
+                <button id="home-review-btn" class="main-btn secondary-btn" style="display: none;">Back to Home</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="result-card">
+                <h2>Quiz Completed!</h2>
+                <div class="score-circle">
+                    <span id="score-text">0/0</span>
+                    <small>Score</small>
+                </div>
+                <p id="result-message"></p>
+                <div class="action-buttons">
+                    <button id="restart-btn" class="main-btn">Try Another Topic</button>
+                    <button id="review-btn" class="main-btn secondary-btn">Review Answers</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
